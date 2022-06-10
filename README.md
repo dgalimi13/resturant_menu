@@ -1,0 +1,1 @@
+This will be a new version of my previous bartaco menu cli. it will use many resturants a user can select. and will scrap data from multiple external resources.
