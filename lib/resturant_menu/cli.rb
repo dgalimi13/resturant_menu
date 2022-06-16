@@ -19,6 +19,11 @@ class ResturantMenu::CLI
         end
     end
 
+    def get_user_item
+        chosen_item = gets.strip.to_i
+        show_ingredients_for(chosen_item) if valid_input(chosen_item, @items)
+    end
+
     def show_ingredients_for(chosen_item)
         item = @items[chosen_item - 1]
         item.get_ingredients 
