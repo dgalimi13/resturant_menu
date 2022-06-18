@@ -32,5 +32,9 @@ class ResturantMenu::CLI
         puts "hit enter to continue"
         get_user_item
     end
+
+    def valid_input(input, data)
+        input.to_i <= data.length && input.to_i > 0
+    end
     
 end 
