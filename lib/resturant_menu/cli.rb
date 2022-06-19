@@ -36,5 +36,10 @@ class ResturantMenu::CLI
     def valid_input(input, data)
         input.to_i <= data.length && input.to_i > 0
     end
+
+    def repeat
+        puts "if you are finished type 'exit' to exit or enter to see our tacos again"
+        @input = gets.strip
+      end 
     
 end 
