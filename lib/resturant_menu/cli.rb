@@ -11,6 +11,10 @@ class ResturantMenu::CLI
         goodbye
     end
 
+    def get_menu_items
+        @items = ResturantMenu::Item.all
+    end
+
     def list_items
         puts 'Choose a taco to see its ingredients'
         sorted = @items.sort { |a, b| a.name <=> b.name }
