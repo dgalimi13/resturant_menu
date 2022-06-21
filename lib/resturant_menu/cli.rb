@@ -45,5 +45,9 @@ class ResturantMenu::CLI
         puts "if you are finished type 'exit' to exit or enter to see our tacos again"
         @input = gets.strip
       end 
+
+      def goodbye
+        puts "Thank you goodbye"
+      end 
     
 end 
