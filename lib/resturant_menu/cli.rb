@@ -23,6 +23,10 @@ class ResturantMenu::CLI
         end
     end
 
+    def valid_input(input, data)
+        input.to_i <= data.length && input.to_i > 0
+    end
+
     def get_user_item
         chosen_item = gets.strip.to_i
         show_ingredients_for(chosen_item) if valid_input(chosen_item, @items)
