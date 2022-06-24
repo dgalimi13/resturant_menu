@@ -9,6 +9,12 @@ class ResturantMenu::Ingredient
         save
     end
 
-    
+    def self.all 
+        @@all 
+    end 
+
+    def add_to_item
+        @item.ingredients << self unless @item.ingredients.include?(self)
+    end
 
 end
