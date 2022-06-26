@@ -8,4 +8,10 @@ class ResturantMenu::Item
     save
     end
 
+    def self.all
+        ResturantMenu::Scraper.scrape_items if @@all.empty?
+        @@all
+        
+    end
+
 end 
