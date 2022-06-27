@@ -14,4 +14,12 @@ class ResturantMenu::Item
         
     end
 
+    def get_ingredients
+        ResturantMenu::Scraper.scrape_ingredients(self) if @ingredients.empty?
+    end
+
+    def save
+        @@all << self
+    end 
+
 end 
