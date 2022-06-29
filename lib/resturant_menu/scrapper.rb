@@ -11,5 +11,17 @@ class ResturantMenu::Scraper
       end 
     end
 
+    def self.scrape_ingredients(item)
+        doc = Nokogiri::HTML(open(source))
+        
+        ingredients = doc.css(div)
+    
+  
+        ingredients.each do |t|
+          name = t.text
+          
+          ResturantMenu::Ingredient.new(name,item)
+        end 
+
     
 end  
